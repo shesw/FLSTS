@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/choose/choose",
+    "pages/play/play"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"black"
+  },
+
+  "tabBar":{
+    "color":"#3f87ff",
+    "selectedColor":"#fff",
+    "backgroundColor":"#eee",
+    "list":[            
+              {
+                "pagePath": "pages/login/login",
+                "text":"首页"
+              },
+              {
+                "pagePath": "pages/choose/choose",
+                "text": "歌单"
+              },
+              {
+                "pagePath": "pages/play/play",
+                "text": "播放"
+              }
+            ]
+  }
+  
+}
