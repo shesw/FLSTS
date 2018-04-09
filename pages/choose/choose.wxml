@@ -1,2 +1,7 @@
 <!--pages/choose/choose.wxml-->
-<text>pages/choose/choose.wxml</text>
+<view>
+
+<view wx:for="{{songList}}">{{item.name}}</view>
+
+
+</view>
