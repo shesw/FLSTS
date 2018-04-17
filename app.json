@@ -1,14 +1,13 @@
 {
   "pages":[
-    "pages/login/login",
     "pages/choose/choose",
     "pages/play/play"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#12ff3f",
+    "navigationBarTitleText": "飞龙神探社",
+    "navigationBarTextStyle":"white"
   },
 
   "tabBar":{
@@ -16,10 +15,6 @@
     "selectedColor":"#fff",
     "backgroundColor":"#eee",
     "list":[            
-              {
-                "pagePath": "pages/login/login",
-                "text":"首页"
-              },
               {
                 "pagePath": "pages/choose/choose",
                 "text": "歌单"

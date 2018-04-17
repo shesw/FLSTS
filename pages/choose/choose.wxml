@@ -1,7 +1,24 @@
 <!--pages/choose/choose.wxml-->
-<view>
 
-<view wx:for="{{songList}}">{{item.name}}</view>
+<view class="container1">
+
+  <view class="top-bar">
+    <view class="{{current==0?'tag0':'tag0-n'}} tag1" bind:tap="tapp1"><text>生生忘</text></view>
+    <view class="{{current==1?'tag0':'tag0-n'}} tag2" bind:tap="tapp2"><text>肥宅录</text></view>
+    <view class="vertical-sep"/>
+  </view>
+
+  <swiper current='{{current}}' bind:change="change">
+    <swiper-item item-id='0'>
+      <view class='introduction'>{{albumInfo.intro}}</view>
+      <image class='logo' src='{{albumInfo.logoSrc}}' mode='aspectFill'/>
+      <view class='button-view' catch:tap='playAll'>全部播放</view>
+      <scroll-view scroll-y="{{true}}">
+        <song-list customStyle="position:absolute;width:350rpx;height:500rpx;border-radius:15rpx;top:0rpx;left:0rpx;"/>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item item-id='1'></swiper-item>
+  </swiper>
 
 
 </view>

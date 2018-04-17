@@ -5,15 +5,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    songList:[{
-      "name": "xty"
+    current:0,
+    albumInfo:{
+      intro:'这是专辑的简介',
+      logoSrc:'http://sinacloud.net/music-store/img/s13.jpg?KID=sina,2o3w9tlWumQRMwg2TQqi&Expires=1546275546&ssig=v9xt1D01ru',
+      songList:[],
     },
-    {
-      "name":"ylq"
-    },{
-      "name":"zz"
-    }],
   },
+
+  playAll(){
+    console.log('play all')
+  },
+
+
+  tapp1(){
+    this.setData({
+      current:0,
+    })
+  },
+  tapp2(){
+    this.setData({
+      current: 1,
+    })
+  },
+  change(e){
+    this.setData({
+      current:e.detail.current,
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -22,52 +42,5 @@ Page({
   
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })
