@@ -6,26 +6,7 @@ Page({
    */
   data: {
     current:0,
-    albumInfo:{
-      intro:'这是专辑的简介',
-      logoSrc:'http://sinacloud.net/music-store/img/s13.jpg?KID=sina,2o3w9tlWumQRMwg2TQqi&Expires=1546275546&ssig=v9xt1D01ru',
-      songList:[{
-        name:"安且吉兮",
-        by:"声忘"
-      },
-        {
-          name: "生生忘",
-          by: "声忘"
-        },
-        {
-          name: "主旋律",
-          by: "声忘"
-        }, {
-          name: "夏天雨",
-          by: "声忘"
-        }
-      ],
-    },
+    
   },
 
   playAll(){
@@ -54,7 +35,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    wx.request({
+      url: 'http://localhost:70/FLSTSWeb/songsListServlet',
+      method:"GET",
+      headers:{'Content-Type':'application/json;charset=utf-8'},
+      success:function(res){
+        console.log(res.data);
+        that.setData({
+          albumInfo:res.data,
+        })
+      }
+    })
+
+
   },
 
 
