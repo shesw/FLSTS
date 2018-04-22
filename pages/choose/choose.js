@@ -36,10 +36,14 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    var data = {
+      albumName: 'dsksdwgj'
+    };
     wx.request({
-      url: 'http://localhost:70/FLSTSWeb/songsListServlet',
+      url: 'http://localhost:70/FLSTSWeb/songsListServlet?albumName=ssw',
+      data: data,
       method:"GET",
-      headers:{'Content-Type':'application/json;charset=utf-8'},
+      header:"application/json;charset=utf-8",
       success:function(res){
         console.log(res.data);
         that.setData({
