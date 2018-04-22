@@ -14,7 +14,8 @@
       <image class='logo' src='{{albumInfo.logoSrc}}' mode='aspectFill'/>
       <view class='button-view' catch:tap='playAll'>全部播放</view>
       <scroll-view scroll-y="{{true}}">
-        <song-list customStyle="position:absolute;width:350rpx;height:500rpx;border-radius:15rpx;top:0rpx;left:0rpx;"/>
+        <song-list customStyle="position:absolute;width:310rpx;height:500rpx;border-radius:15rpx;top:0rpx;left:0rpx;"
+        dataSource="{{albumInfo.songList}}"/>
       </scroll-view>
     </swiper-item>
     <swiper-item item-id='1'></swiper-item>

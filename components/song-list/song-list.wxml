@@ -1,28 +1,11 @@
 <!--components/song-list/song-list.wxml-->
 
-<view class="container1" style="{{customStyle}}">
+<view class="container1" style="{{customStyle}};border:4rpx solid #eee;">
 
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-<view>安且吉兮</view>
-
-
+  <view wx:for="{{dataSource}}" wx:key="index">
+    <text class='name'>{{item.name}}</text>
+    <text class="by">演唱：{{item.by}}</text>
+    <view class="seperator"/>
+  </view>
 
 </view>

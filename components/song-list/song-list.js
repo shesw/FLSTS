@@ -5,7 +5,7 @@ Component({
    */
   properties: {
     customStyle:String,
-
+    dataSource:Array,
   },
 
   /**
