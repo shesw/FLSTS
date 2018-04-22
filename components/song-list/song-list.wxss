@@ -1,0 +1,19 @@
+/* components/song-list/song-list.wxss */
+
+.name{
+  color: #123;
+  font-size: 35rpx;
+}
+
+.by{
+  color:#789;
+  font-size: 25rpx;
+  margin-left: 40rpx;
+}
+
+.seperator{
+  width:100%;
+  height:4rpx;
+  background-color: #eee;
+  margin-bottom: 20rpx;
+}
