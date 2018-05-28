@@ -85,6 +85,8 @@ export default class Request {
             // } else {
             //   resolve(result);
             // }
+          }else{
+            reject(response.statusCode);
           } //else if (response.statusCode === 401) {
           //   // 登录过期，清除本地登录信息
           //   console.log('401 logout');

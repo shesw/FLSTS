@@ -1,30 +1,29 @@
 {
-  "pages":[
+  "pages": [
     "pages/login/login",
     "pages/choose/choose",
-    "pages/play/play"
+    "pages/play/play",
+    "pages/video/video"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#12ff3f",
     "navigationBarTitleText": "飞龙神探社",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   },
-
-  "tabBar":{
-    "color":"#3f87ff",
-    "selectedColor":"#666",
-    "backgroundColor":"#eee",
-    "list":[   
-              {
-                "pagePath": "pages/login/login",
-                "text": "首页"
-              },         
-              {
-                "pagePath": "pages/choose/choose",
-                "text": "歌单"
-              }
-            ]
+  "tabBar": {
+    "color": "#3f87ff",
+    "selectedColor": "#666",
+    "backgroundColor": "#eee",
+    "list": [
+      {
+        "pagePath": "pages/login/login",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/choose/choose",
+        "text": "歌单"
+      }
+    ]
   }
-  
 }

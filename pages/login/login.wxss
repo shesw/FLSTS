@@ -5,3 +5,13 @@ image{
   width:100%;
   height:100%;
 }
+
+.video{
+  width: 100rpx;
+  height:100rpx;
+  background-color:#0aa;
+  opacity:0;
+  position:absolute;
+  top:200rpx;
+  right:180rpx;
+}

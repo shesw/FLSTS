@@ -1,0 +1,6 @@
+<!--pages/video/video.wxml-->
+<view class="section tc">
+  <video src="{{url}}"  controls style="width:100%"></video>
+</view>
+<input bindinput='setURL' style="width:100%;height:50rpx" placeholder='input'/>
+<button catch:tap="set">set</button>
