@@ -2,13 +2,13 @@
 
 .name{
   color: #123;
-  font-size: 35rpx;
+  font-size: 25rpx;
 }
 
 .by{
   color:#789;
-  font-size: 25rpx;
-  margin-left: 40rpx;
+  font-size: 20rpx;
+  margin-left: 35rpx;
 }
 
 .seperator{

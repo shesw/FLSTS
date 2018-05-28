@@ -1,2 +1,21 @@
 <!--pages/play/play.wxml-->
-<text>pages/play/play.wxml</text>
+<view class="container1">
+
+  <image src = "{{songInfo.jpgPath}}"/>
+
+  <swiper current="{{current}}" bind:catchtap='change' >
+    <swiper-item item-id='0'>
+      <scroll-view scroll-y><text>{{songInfo.lyrics}}</text></scroll-view> 
+    </swiper-item>
+    <swiper-item item-id='1'>
+      <scroll-view scroll-y><text>{{songInfo.backgroundStory}}</text></scroll-view>
+    </swiper-item>
+  </swiper>
+
+  <view class="bottom">
+    <button bind:tap="previous">上一首</button>
+    <button bind:tap="playPause">{{status}}</button>
+    <button bind:tap="next">下一首</button>
+  </view>
+
+</view>

@@ -2,9 +2,9 @@
 
 <view class="container1" style="{{customStyle}};border:4rpx solid #eee;">
 
-  <view wx:for="{{dataSource}}" wx:key="index">
+  <view wx:for="{{dataSource}}" wx:key="index" data-id="{{item.id}}" catch:tap='choose'>
     <text class='name'>{{item.name}}</text>
-    <text class="by">演唱：{{item.by}}</text>
+    <text class="by">cq：{{item.by}}</text>
     <view class="seperator"/>
   </view>
 

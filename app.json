@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/login/login",
     "pages/choose/choose",
     "pages/play/play"
   ],
@@ -12,16 +13,16 @@
 
   "tabBar":{
     "color":"#3f87ff",
-    "selectedColor":"#fff",
+    "selectedColor":"#666",
     "backgroundColor":"#eee",
-    "list":[            
+    "list":[   
+              {
+                "pagePath": "pages/login/login",
+                "text": "首页"
+              },         
               {
                 "pagePath": "pages/choose/choose",
                 "text": "歌单"
-              },
-              {
-                "pagePath": "pages/play/play",
-                "text": "播放"
               }
             ]
   }
