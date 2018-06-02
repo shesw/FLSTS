@@ -1,7 +1,7 @@
 import request from "../../utils/request.js"
 // pages/video/video.js
 Page({
-  url:'http://sinacloud.net/music-store/iligallthings/akasouma/Akane%20Soma%20-%20YouTube.mp4?KID=sina,2o3w9tlWumQRMwg2TQqi&Expires=1527780157&ssig=5N5i%2BVOM8g',
+  bucketName:'music-store',
   /**
    * 页面的初始数据
    */
@@ -9,20 +9,33 @@ Page({
     url:''
   },
 
-  setURL(e){
-    console.log(e.detail.value)
+  setBN(e){
+    this.bucketName = e.detail.value;
+  },
+
+  setPath(e){
+    this.path = e.detail.value
+  },
+
+  setExpire(e){
+    this.expire = e.detail.value
   },
 
   set(){
-    request.get('getURL',{input:this.input}).then((res)=>{
+    console.log(this.bucketName)
+    console.log(this.path)
+    console.log(this.expire)
+    const para = {
+      bucketName: this.bucketName,
+      path: this.path,
+      minutes: this.expire,
+    }
+    request.get('generurl',para).then((res)=>{
+      console.log(res)
       this.setData({
-        url: res.url
+        url:res
       })
-    },()=>{
-      this.setData({
-        url:this.url
-      })
-    }) 
+    })
   }
 
 })

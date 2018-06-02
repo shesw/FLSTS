@@ -2,5 +2,7 @@
 <view class="section tc">
   <video src="{{url}}"  controls style="width:100%"></video>
 </view>
-<input bindinput='setURL' style="width:100%;height:50rpx" placeholder='input'/>
+<input bindinput='seBN' style="width:100%;height:50rpx" placeholder="bucket name"/>
+<input bindinput='setPath' style="width:100%;height:50rpx" placeholder='path'/>
+<input bindinput='setExpire' style="width:100%;height:50rpx" placeholder='expire'/>
 <button catch:tap="set">set</button>
