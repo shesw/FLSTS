@@ -53,6 +53,22 @@ Component({
       this.info = e.detail.value;
     },
     upload() {
+      const {info} = this;
+      for (let i = 0; i < this.data.picList.length; i++) {
+        const pic = this.data.picList[i];
+        wx.uploadFile({
+          url: `${app.settings.SERVER_ADDRESS}uploadPic`, 
+          filePath: pic,
+          name: info,
+          success: function (res) {
+            var data = res.data
+            //do something
+          },
+          fail(e){
+            console.log(e)
+          }
+        })
+      }
     }
   }
 })
