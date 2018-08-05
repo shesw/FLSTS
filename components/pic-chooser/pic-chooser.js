@@ -61,6 +61,7 @@ Component({
         app.showToast('请选择图片')
         return;
       }
+      const that = this;
       const info = this.info ? this.info : new Date().getMilliseconds();
       app.showLoading('上传中');
       let count = 1;
@@ -81,11 +82,18 @@ Component({
               count++;
             } else {
               wx.hideLoading();
+              app.showToast('上传成功！')
+              that.setData({
+                picList:[]
+              })
             }
           },
           fail(e) {
-            console.log(e)
-            app.showToast('上传失败')
+            wx.hideLoading();
+              app.showToast('上传失败！')
+              that.setData({
+                picList:[]
+              })
           }
         })
       }
