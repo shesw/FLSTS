@@ -1,3 +1,4 @@
-<!--pages/login/login.wxml-->
-<image src="/res/FLSTS.jpg" mode="aspectFill"/>
-<view class="video" catch:tap="video"/>
+<!-- pages/login/login.wxml -->
+<image src="/res/FLSTS.jpg" mode="aspectFill" />
+<view class="video" catch:tap="video" />
+<view class="uploadPic" bind:tap="uploadPic" />

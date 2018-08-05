@@ -1,17 +1,27 @@
 /* pages/login/login.wxss */
 
-image{
+image {
   position: absolute;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
-.video{
+.video {
   width: 100rpx;
-  height:100rpx;
-  background-color:#0aa;
-  opacity:0;
-  position:absolute;
-  top:200rpx;
-  right:180rpx;
+  height: 100rpx;
+  background-color: #0aa;
+  opacity: 0;
+  position: absolute;
+  top: 200rpx;
+  right: 180rpx;
+}
+
+.uploadPic {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #0aa;
+  opacity: 0;
+  position: absolute;
+  top: 90rpx;
+  left: 270rpx;
 }
