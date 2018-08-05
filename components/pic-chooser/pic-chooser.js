@@ -26,6 +26,10 @@ Component({
         sizeType: ['original', 'compressed'],
         sourceType: ['album', 'camera'],
         success: function (res) {
+          if (that.data.picList.length + res.tempFilePaths.length > 9) {
+            app.showToast('最多9张');
+            return;
+          }
           that.data.picList.push(...res.tempFilePaths);
           that.setData({
             picList: that.data.picList
@@ -53,18 +57,22 @@ Component({
       this.info = e.detail.value;
     },
     upload() {
-      const {info} = this;
+      if (this.data.picList.length === 0) {
+        app.showToast('请选择图片')
+        return;
+      }
+      const info = this.info ? this.info : new Date().getMilliseconds();
       for (let i = 0; i < this.data.picList.length; i++) {
         const pic = this.data.picList[i];
         wx.uploadFile({
-          url: `${app.settings.SERVER_ADDRESS}uploadPic`, 
+          url: `${app.settings.SERVER_ADDRESS}uploadObj`,
           filePath: pic,
           name: info,
           success: function (res) {
             var data = res.data
             //do something
           },
-          fail(e){
+          fail(e) {
             console.log(e)
           }
         })

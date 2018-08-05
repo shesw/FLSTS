@@ -13,5 +13,5 @@
         <view class="key-text">上传命名:</view>
         <input bindinput="getInputInfo" class="input" />
     </view>
-    <button class="btn-upload" bind:tap="upload">上传图片</button>
+    <button class="btn-upload" bind:tap="upload" wx:if="{{picList.length<10}}">上传图片</button>
 </view>
