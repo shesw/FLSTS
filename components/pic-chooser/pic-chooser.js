@@ -12,42 +12,47 @@ Component({
    * 组件的初始数据
    */
   data: {
-    picList:[]
+    picList: []
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-    openFile(){
+    openFile() {
       const that = this;
       wx.chooseImage({
-        count: 9, 
-        sizeType: ['original', 'compressed'], 
-        sourceType: ['album', 'camera'], 
+        count: 9,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
         success: function (res) {
           that.data.picList.push(...res.tempFilePaths);
           that.setData({
             picList: that.data.picList
           })
         },
-        fail(){
+        fail() {
           app.showToast('上传失败')
         }
       })
     },
-    preview(e){
+    preview(e) {
       const that = this
       wx.previewImage({
-        current: that.data.picList[e.currentTarget.dataset.index], 
-        urls:  that.data.picList
+        current: that.data.picList[e.currentTarget.dataset.index],
+        urls: that.data.picList
       })
     },
-    del(e){
-      this.data.picList.splice(Number(e.currentTarget.dataset.index),1);
+    del(e) {
+      this.data.picList.splice(Number(e.currentTarget.dataset.index), 1);
       this.setData({
         picList: this.data.picList
       })
+    },
+    getInputInfo(e) {
+      this.info = e.detail.value;
+    },
+    upload() {
     }
   }
 })

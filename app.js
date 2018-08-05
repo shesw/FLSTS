@@ -4,8 +4,7 @@ import Settings from './utils/settings';
 
 App({ 
   settings:new Settings(), 
-  onLaunch: function () {
-  },
+  onLaunch: function () {},
   albumInfos:[],
   showToast(title){
     wx.showToast({
