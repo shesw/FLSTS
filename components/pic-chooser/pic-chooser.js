@@ -62,22 +62,30 @@ Component({
         return;
       }
       const info = this.info ? this.info : new Date().getMilliseconds();
-      for (let i = 0; i < this.data.picList.length; i++) {
+      app.showLoading('上传中');
+      let count = 1;
+      const length = this.data.picList.length;
+      for (let i = 0; i < length; i++) {
         const pic = this.data.picList[i];
         wx.uploadFile({
           url: `${app.settings.SERVER_ADDRESS}uploadObj`,
           filePath: pic,
           name: info,
-          formData:{
+          formData: {
             name: info,
           },
           success: function (res) {
             var data = res.data
             console.log(data)
-            //do something
+            if (count < length) {
+              count++;
+            } else {
+              wx.hideLoading();
+            }
           },
           fail(e) {
             console.log(e)
+            app.showToast('上传失败')
           }
         })
       }

@@ -2,14 +2,20 @@
 import request from './utils/request';
 import Settings from './utils/settings';
 
-App({ 
-  settings:new Settings(), 
+App({
+  settings: new Settings(),
   onLaunch: function () {},
-  albumInfos:[],
-  showToast(title){
+  albumInfos: [],
+  showToast(title) {
     wx.showToast({
-      title:title,
+      title: title,
       icon: 'none'
+    })
+  },
+  showLoading(title) {
+    wx.showLoading({
+      title: title,
+      mask: true
     })
   }
 })
