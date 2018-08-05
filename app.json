@@ -1,11 +1,10 @@
 {
   "pages": [
-    "pages/uploadPic/uploadPic",
     "pages/login/login",
     "pages/choose/choose",
     "pages/play/play",
-    "pages/video/video"
-    
+    "pages/video/video",
+    "pages/uploadPic/uploadPic"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,8 +16,7 @@
     "color": "#3f87ff",
     "selectedColor": "#666",
     "backgroundColor": "#eee",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/login/login",
         "text": "首页"
       },
