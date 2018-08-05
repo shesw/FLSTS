@@ -68,8 +68,12 @@ Component({
           url: `${app.settings.SERVER_ADDRESS}uploadObj`,
           filePath: pic,
           name: info,
+          formData:{
+            name: info,
+          },
           success: function (res) {
             var data = res.data
+            console.log(data)
             //do something
           },
           fail(e) {
