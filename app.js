@@ -7,4 +7,10 @@ App({
   onLaunch: function () {
   },
   albumInfos:[],
+  showToast(title){
+    wx.showToast({
+      title:title,
+      icon: 'none'
+    })
+  }
 })

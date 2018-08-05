@@ -1,1 +1,5 @@
-{}
+{
+    "usingComponents":{
+        "pic-chooser":"/components/pic-chooser/pic-chooser"
+    }
+}

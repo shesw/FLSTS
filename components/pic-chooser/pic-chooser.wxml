@@ -1,0 +1,13 @@
+<!-- components/pic-chooser/pic-chooser.wxml -->
+<view class="container">
+    <view class="images">
+        <block wx:for="{{picList}}" wx:key="index">
+            <view style="position:relative">
+                <image src="/res/icon_del.png" class="icon-del" mode="aspectFit" data-index="{{index}}" bind:tap="del"/>
+                <image src="{{item}}" class="img" mode="aspectFit" bind:tap="preview" data-index="{{index}}" />
+            </view>
+        </block>
+        <image src="/res/icon_add.png" class="img" mode="aspectFit" bind:tap="openFile" />
+    </view>
+    <button class="btn-open-file">上传图片</button>
+</view>

@@ -1,2 +1,4 @@
 <!--pages/uploadPic/uploadPic.wxml-->
-<text>pages/uploadPic/uploadPic.wxml</text>
+<view class="container">
+    <pic-chooser/>
+</view>
