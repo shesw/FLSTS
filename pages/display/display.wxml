@@ -1,2 +1,10 @@
-<!--pages/display/display.wxml-->
-<text>pages/display/display.wxml</text>
+<!-- pages/display/display.wxml -->
+<view class="c1">
+    <scroll-view class="sv" scroll-y>
+        <block class="pics" wx:for="{{pics}}" wx:key="index">
+            <image class="pic" src="{{item}}" mode="aspectFit" data-index="{{index}}" bind:tap="preview"/>
+        </block>
+    </scroll-view>
+    <input class="key" bindinput="key" />
+    <button class="btn" bind:tap="btn">确定</button>
+</view>

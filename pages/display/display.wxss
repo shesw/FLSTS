@@ -1,1 +1,42 @@
 /* pages/display/display.wxss */
+
+.c1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20rpx;
+    overflow: hidden;
+}
+
+.sv{
+    width:90vw;
+    height:80vh;
+    border: 1rpx solid #eee;
+}
+
+.key{
+    width: 90vw;
+    height:80rpx;
+    border: 2rpx solid #999;
+    margin-top: 20rpx;
+}
+
+.btn{
+    width:90vw;
+    height:80rpx;
+    margin-top: 20rpx;
+}
+
+.pics{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pic{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 10rpx;
+}
