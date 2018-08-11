@@ -25,3 +25,13 @@ image {
   top: 90rpx;
   left: 270rpx;
 }
+
+.display{
+  width: 120rpx;
+  height: 120rpx;
+  background-color: #0aa;
+  opacity: 0;
+  position: absolute;
+  top: 310rpx;
+  left: 270rpx;
+}

@@ -18,6 +18,12 @@ Page({
     wx.navigateTo({
       url: '/pages/uploadPic/uploadPic',
     })
+  },
+
+  display() {
+    wx.navigateTo({
+      url: '/pages/display/display',
+    })
   }
 
 })
