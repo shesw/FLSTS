@@ -26,8 +26,9 @@ Page({
     request.get('favorPics', {
       key: this.searchKey
     }).then((res) => {
+      console.log(res)
       this.setData({
-        pics: res.pics,
+        pics: res.data,
       })
     })
   },
