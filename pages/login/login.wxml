@@ -3,3 +3,4 @@
 <view class="video" catch:tap="video" />
 <view class="uploadPic" bind:tap="uploadPic" />
 <view class="display" bind:tap="display" />
+<view class="canvas" bind:tap="canvas" />

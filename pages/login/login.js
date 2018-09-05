@@ -24,6 +24,12 @@ Page({
     wx.navigateTo({
       url: '/pages/display/display',
     })
+  },
+
+  canvas() {
+    wx.navigateTo({
+      url: '/pages/canvas/canvas',
+    })
   }
 
 })
