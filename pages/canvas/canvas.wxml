@@ -1,0 +1,1 @@
+<koo-painter palette="{{palette}}" bind:imgOK="imgOk"/>

@@ -5,7 +5,8 @@
     "pages/play/play",
     "pages/video/video",
     "pages/uploadPic/uploadPic",
-    "pages/display/display"
+    "pages/display/display",
+    "pages/canvas/canvas"
   ],
   "window": {
     "backgroundTextStyle": "light",
